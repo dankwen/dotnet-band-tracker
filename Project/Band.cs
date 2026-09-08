@@ -16,7 +16,7 @@ public class Band
         }
     }
     
-    public string Style { get; set; } = "(unknown)";
+    public string Style { get; set; } = "(generic)";
     
     private int _yearFounded = 0;
     public int YearFounded
