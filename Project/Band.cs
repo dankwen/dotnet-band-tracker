@@ -18,17 +18,11 @@ public class Band
     
     public string Style { get; set; } = "(generic)";
     
-    private int _yearFounded = 0;
-    public int YearFounded
+    private int _timesSeen = 0;
+    public int TimesSeen
     {
-        get { return _yearFounded; }
-        set
-        {
-            if (value >= 0)
-            {
-                _yearFounded = value;
-            }
-        }
+        get { return _timesSeen; } 
+        private set { if (value >= 0) { _timesSeen = value; } }
     }
 
     public Band(string name)
