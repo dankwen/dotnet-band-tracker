@@ -1,8 +1,5 @@
 public class Band
 {
-    // TODO — Task 2. These three are holes: anything, anywhere, can write
-    // anything into them. Close every one into a property.
-    // Task 3 gives one of them a rule; Task 4 seals one shut.
     private string _name = "(unnamed)";
     public string Name
     {
@@ -29,5 +26,10 @@ public class Band
     {
         Name = name;
         Style = "";
+    }
+
+    public void SeeBand()
+    {
+        _timesSeen++;
     }
 }
