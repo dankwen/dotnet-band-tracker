@@ -13,3 +13,11 @@ foreach (Band item in registry.All())
 {
     Console.WriteLine(item.Name);
 }
+
+Console.WriteLine();
+
+// Your verb, on two of your records — watch only one of them move.
+List<Band> both = registry.All();
+Console.WriteLine($"before:  {both[0].TimesSeen}   {both[1].TimesSeen}");
+both[0].SeeBand();
+Console.WriteLine($"after:   {both[0].TimesSeen}   {both[1].TimesSeen}");

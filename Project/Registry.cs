@@ -3,8 +3,7 @@ public class Registry
 {
     private readonly List<Band> _items = new List<Band>();
 
-    // TODO — Task 1. Say what your project is about, in words.
-    public static string Topic => "Bands I like and want to see in concert";     // ← yours
+    public static string Topic => "Bands I like and want to see in concert";
 
     public Band NewItem(string name) => new Band(name);
 
@@ -17,7 +16,6 @@ public class Registry
 
     public List<Band> All()
     {
-        // TODO — Task 5. Hand back a COPY, never the list itself.
         return new List<Band>(_items);
     }
 }
