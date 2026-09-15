@@ -16,8 +16,17 @@ foreach (Band item in registry.All())
 
 Console.WriteLine();
 
-// Your verb, on two of your records — watch only one of them move.
 List<Band> both = registry.All();
 Console.WriteLine($"before:  {both[0].TimesSeen}   {both[1].TimesSeen}");
 both[0].SeeBand();
 Console.WriteLine($"after:   {both[0].TimesSeen}   {both[1].TimesSeen}");
+
+Console.WriteLine();
+
+// One I know is on the registry.
+Band? known = registry.Find("The Cure");
+Console.WriteLine(known == null ? "Nothing on file by that name." : "Found it.");
+
+// And one nobody has ever heard of.
+Band? missing = registry.Find("Nickelback");
+Console.WriteLine(missing == null ? "Nothing on file by that name." : "...found something that shouldn't be there.");

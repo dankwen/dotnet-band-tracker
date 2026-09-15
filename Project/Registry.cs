@@ -18,4 +18,18 @@ public class Registry
     {
         return new List<Band>(_items);
     }
+
+    public Band? Find(string name)
+    {
+        foreach (Band item in _items)
+        {
+            if (item.Name == name)
+            {
+                return item;
+            }
+        }
+        return null;
+    }
+
+
 }
