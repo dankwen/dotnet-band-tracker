@@ -30,3 +30,9 @@ Console.WriteLine(known == null ? "Nothing on file by that name." : "Found it.")
 // And one nobody has ever heard of.
 Band? missing = registry.Find("Nickelback");
 Console.WriteLine(missing == null ? "Nothing on file by that name." : "...found something that shouldn't be there.");
+
+Console.WriteLine();
+Console.WriteLine(registry.Remove("The Cure")
+    ? "Removed."
+    : "Nothing by that name.");
+Console.WriteLine($"{registry.Count} on file.");

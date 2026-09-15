@@ -31,5 +31,12 @@ public class Registry
         return null;
     }
 
+    public bool Remove(string name)
+    {
+        Band? found = Find(name);
+        if (found == null) { return false; }
 
+        _items.Remove(found);
+        return true;
+    }
 }
